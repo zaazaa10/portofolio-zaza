@@ -8,12 +8,12 @@ function Certificates() {
       issuer: "Online Course",
     },
     {
-      image: "/img/sertif.figma01.jpg",
+      image: "/img/sertif.figma-uiux01.jpg",
       title: "UI/UX Design with Figma",
       issuer: "Online Course",
     },
     {
-      image: "/img/sertif.web-programming02.jpg",
+      image: "/img/sertif.web-programing02.jpg",
       title: "HTML, CSS & JS",
       issuer: "Online Course",
     },
