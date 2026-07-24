@@ -10,7 +10,7 @@ import {
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
+    name: "",  
     email: "",
     message: "",
   });
