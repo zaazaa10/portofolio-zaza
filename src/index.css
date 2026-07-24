@@ -1018,40 +1018,7 @@ a {
   box-shadow:
     0 0 0 4px rgba(226, 107, 156, 0.1);
 }
-/* =========================
-   CONTACT SECTION
-========================= */
 
-.send-button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  padding: 14px;
-
-  border: none;
-  border-radius: 25px;
-
-  background: #e26b9c;
-  color: white;
-
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.send-button:hover {
-  transform: translateY(-3px);
-  background: #d55789;
-
-  box-shadow:
-    0 10px 25px rgba(226, 107, 156, 0.25);
-}
 /* =========================
    CERTIFICATES SECTION
 ========================= */
@@ -1064,20 +1031,12 @@ a {
   padding: 130px 8%;
 
   background:
-    radial-gradient(
-      circle at 10% 20%,
-      #ffddea 0%,
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      #ffe8f1 0%,
-      transparent 25%
-    ),
+    radial-gradient(circle at 10% 20%, #ffddea 0%, transparent 25%),
+    radial-gradient(circle at 90% 80%, #ffe8f1 0%, transparent 25%),
     #fff8fb;
 }
 
-/* CERTIFICATE HEADING */
+/* HEADING */
 
 .certificates-section .section-heading {
   position: relative;
@@ -1100,7 +1059,6 @@ a {
   color: #d96392;
 
   border-radius: 30px;
-
   font-size: 13px;
 }
 
@@ -1122,30 +1080,28 @@ a {
   line-height: 1.7;
 }
 
+/* DEKORASI */
+
 .certificates-section::before {
   content: "✦";
-  position: absolute;
 
+  position: absolute;
   top: 150px;
   left: 8%;
 
   font-size: 35px;
   color: #f2a4c0;
-
-  transform: rotate(-15deg);
 }
 
 .certificates-section::after {
   content: "♡";
-  position: absolute;
 
+  position: absolute;
   right: 10%;
   bottom: 100px;
 
   font-size: 50px;
   color: #f2a4c0;
-
-  transform: rotate(15deg);
 }
 
 /* GRID */
@@ -1166,8 +1122,6 @@ a {
 
 .certificate-card {
   position: relative;
-
-  overflow: visible;
 
   padding: 12px;
 
@@ -1196,14 +1150,7 @@ a {
 .certificate-card:hover {
   z-index: 5;
 
-  transform:
-    translateY(-12px)
-    rotate(0deg)
-    scale(1.03);
-
-  box-shadow:
-    8px 12px 0 #f7cbdc,
-    0 25px 45px rgba(210, 105, 145, 0.22);
+  transform: translateY(-12px) rotate(0deg) scale(1.03);
 }
 
 /* TAPE */
@@ -1220,7 +1167,6 @@ a {
   transform: translateX(-50%) rotate(-3deg);
 
   background: rgba(255, 210, 225, 0.85);
-
   border: 1px solid #f2bfd2;
 
   z-index: 3;
@@ -1282,8 +1228,6 @@ a {
   font-size: 13px;
 }
 
-/* TAG */
-
 .certificate-tag {
   display: inline-block;
 
@@ -1296,6 +1240,40 @@ a {
   border-radius: 15px;
 
   font-size: 10px;
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.send-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #e26b9c;
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-button:hover {
+  transform: translateY(-3px);
+  background: #d55789;
+
+  box-shadow:
+    0 10px 25px rgba(226, 107, 156, 0.25);
 }
 
 @media (max-width: 850px) {
