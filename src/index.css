@@ -1077,6 +1077,51 @@ a {
     #fff8fb;
 }
 
+/* CERTIFICATE HEADING */
+
+.certificates-section .section-heading {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.certificates-section .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 16px;
+
+  background: white;
+  color: #d96392;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+}
+
+.certificates-section .section-heading h2 {
+  margin-top: 20px;
+
+  font-size: clamp(40px, 5vw, 60px);
+  color: #49283a;
+}
+
+.certificates-section .section-heading h2 span {
+  color: #e26b9c;
+}
+
+.certificates-section .section-heading p {
+  margin-top: 15px;
+
+  color: #987386;
+  line-height: 1.7;
+}
+
 .certificates-section::before {
   content: "✦";
   position: absolute;
