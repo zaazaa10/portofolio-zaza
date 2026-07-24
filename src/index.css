@@ -1052,110 +1052,205 @@ a {
   box-shadow:
     0 10px 25px rgba(226, 107, 156, 0.25);
 }
-.certificates-section {
-  min-height: 100vh;
-  padding: 130px 8%;
-  background: #fff8fb;
-}
-
-.certificates-grid {
-  max-width: 1100px;
-  margin: 50px auto 0;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.certificate-card {
-  overflow: hidden;
-
-  background: white;
-  border: 1px solid #f4d5e2;
-  border-radius: 20px;
-
-  box-shadow: 0 10px 25px rgba(210, 105, 145, 0.1);
-}
-
-.certificate-image {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-}
-
-.certificate-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.certificate-info {
-  padding: 20px;
-}
-
-.certificate-info h3 {
-  color: #49283a;
-}
-
-.certificate-info p {
-  margin-top: 8px;
-  color: #987386;
-  font-size: 14px;
-}
-/* CERTIFICATES */
+/* =========================
+   CERTIFICATES SECTION
+========================= */
 
 .certificates-section {
-  display: block;
-  width: 100%;
+  position: relative;
+  overflow: hidden;
+
   min-height: 100vh;
   padding: 130px 8%;
-  background: #fff8fb;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      #ffddea 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      #ffe8f1 0%,
+      transparent 25%
+    ),
+    #fff8fb;
 }
 
+.certificates-section::before {
+  content: "✦";
+  position: absolute;
+
+  top: 150px;
+  left: 8%;
+
+  font-size: 35px;
+  color: #f2a4c0;
+
+  transform: rotate(-15deg);
+}
+
+.certificates-section::after {
+  content: "♡";
+  position: absolute;
+
+  right: 10%;
+  bottom: 100px;
+
+  font-size: 50px;
+  color: #f2a4c0;
+
+  transform: rotate(15deg);
+}
+
+/* GRID */
+
 .certificates-grid {
-  width: 100%;
+  position: relative;
+  z-index: 2;
+
   max-width: 1100px;
   margin: 60px auto 0;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 35px;
 }
+
+/* CARD */
 
 .certificate-card {
-  display: block;
-  overflow: hidden;
+  position: relative;
+
+  overflow: visible;
+
+  padding: 12px;
 
   background: white;
-  border: 1px solid #f3d4e1;
-  border-radius: 25px;
 
-  box-shadow: 0 12px 30px rgba(210, 105, 145, 0.1);
+  border: 1px solid #f3d4e1;
+  border-radius: 8px;
+
+  box-shadow:
+    5px 8px 0 #fbdce8,
+    0 15px 30px rgba(210, 105, 145, 0.12);
+
+  transition: all 0.35s ease;
+
+  transform: rotate(-2deg);
 }
+
+.certificate-card:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.certificate-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+.certificate-card:hover {
+  z-index: 5;
+
+  transform:
+    translateY(-12px)
+    rotate(0deg)
+    scale(1.03);
+
+  box-shadow:
+    8px 12px 0 #f7cbdc,
+    0 25px 45px rgba(210, 105, 145, 0.22);
+}
+
+/* TAPE */
+
+.certificate-tape {
+  position: absolute;
+
+  top: -14px;
+  left: 50%;
+
+  width: 85px;
+  height: 28px;
+
+  transform: translateX(-50%) rotate(-3deg);
+
+  background: rgba(255, 210, 225, 0.85);
+
+  border: 1px solid #f2bfd2;
+
+  z-index: 3;
+}
+
+/* NUMBER */
+
+.certificate-number {
+  padding: 10px 5px;
+
+  color: #d96392;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+/* IMAGE */
 
 .certificate-image {
   width: 100%;
-  height: 230px;
+  height: 220px;
+
   overflow: hidden;
+
+  background: #fff0f6;
 }
 
 .certificate-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
+  transition: transform 0.4s ease;
 }
 
+.certificate-card:hover .certificate-image img {
+  transform: scale(1.08);
+}
+
+/* INFO */
+
 .certificate-info {
-  padding: 25px;
+  padding: 18px 8px 10px;
 }
 
 .certificate-info h3 {
   color: #49283a;
+  font-size: 18px;
 }
 
 .certificate-info p {
-  margin-top: 8px;
+  margin-top: 6px;
+
   color: #987386;
+  font-size: 13px;
+}
+
+/* TAG */
+
+.certificate-tag {
+  display: inline-block;
+
+  margin-top: 14px;
+  padding: 6px 10px;
+
+  background: #fff0f6;
+  color: #d96392;
+
+  border-radius: 15px;
+
+  font-size: 10px;
 }
 
 @media (max-width: 850px) {

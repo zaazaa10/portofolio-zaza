@@ -40,15 +40,16 @@ function Certificates() {
       </div>
 
       <div className="certificates-grid">
-        {certificates.map((certificate, index) => (
-          <CertificateCard
-            key={index}
-            image={certificate.image}
-            title={certificate.title}
-            issuer={certificate.issuer}
-          />
-        ))}
-      </div>
+  {certificates.map((certificate, index) => (
+    <CertificateCard
+      key={index}
+      image={certificate.image}
+      title={certificate.title}
+      issuer={certificate.issuer}
+      number={`0${index + 1}`}
+    />
+  ))}
+</div>
     </section>
   );
 }
